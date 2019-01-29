@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/play_page_default_bg"
+    android:orientation="vertical">
+    <!--  顶部音乐  -->
+    <RelativeLayout
+        android:id="@+id/home_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/red">
+
+        <ImageButton
+            android:id="@+id/home_search_music"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/search_music" />
+
+        <TextView
+            android:id="@+id/home_music_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/music_txt"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <ImageButton
+            android:id="@+id/home_play_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/music_play_state_white" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            android:background="@drawable/play_state_bkg">
+
+            <com.archermind.music.loadingview.LoadingIndicatorView
+                android:id="@+id/loading_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                style="@style/LoadingIndicatorView.Small"
+                android:visibility="visible"
+                android:layout_centerInParent="true"
+                app:indicatorName="AudioEqualizerIndicator"
+                app:indicatorColor="@color/white"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--  外部设备  -->
+    <LinearLayout
+        android:id="@+id/external_storage_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_title_layout"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp">
+
+        　<android.support.v7.widget.CardView
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:contentPadding="8dp"
+            app:cardUseCompatPadding="true"
+            app:cardPreventCornerOverlap="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp">
+            <ImageButton
+                android:id="@+id/bluetooth_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bluetooth_bkg"
+                 />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:contentPadding="8dp"
+                app:cardUseCompatPadding="true"
+                app:cardPreventCornerOverlap="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+                <ImageButton
+                    android:id="@+id/usb_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/usb_bkg"
+                    />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:contentPadding="8dp"
+                app:cardUseCompatPadding="true"
+                app:cardPreventCornerOverlap="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+            <ImageButton
+                android:id="@+id/ipod_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ipod_bkg" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:contentPadding="8dp"
+                app:cardUseCompatPadding="true"
+                app:cardPreventCornerOverlap="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+            <ImageButton
+                android:id="@+id/usb_two_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sdcard_bkg" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:contentPadding="8dp"
+                app:cardUseCompatPadding="true"
+                app:cardPreventCornerOverlap="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+            <ImageButton
+                android:id="@+id/sdcard_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aux_bkg" />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:contentPadding="8dp"
+                app:cardUseCompatPadding="true"
+                app:cardPreventCornerOverlap="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+            <ImageButton
+                android:id="@+id/usb2_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usb_bkg"
+                />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    <!--  为您推荐  -->
+    <RelativeLayout
+        android:id="@+id/push_music_layout"
+        android:layout_width="900dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_title_layout"
+        android:layout_alignParentRight="true" >
+        <TextView
+            android:id="@+id/push_music_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/push_music_txt"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/push_listview"
+            android:layout_below="@id/push_music_title"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <!--  我的音乐  -->
+
+    <RelativeLayout
+        android:id="@+id/personal_music_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_title_layout"
+        android:layout_toLeftOf="@id/push_music_layout"
+        android:layout_toRightOf="@id/external_storage_layout"
+        >
+        <android.support.v7.widget.CardView
+            android:id="@+id/online_music_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:contentPadding="8dp"
+            app:cardUseCompatPadding="true"
+            app:cardPreventCornerOverlap="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center|center_horizontal"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/online_music"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/online_music_txt"
+                android:textSize="35sp" />
+            <com.archermind.music.loadingview.LoadingIndicatorView
+                android:id="@+id/online_music_wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/LoadingIndicatorView"
+                android:visibility="visible"
+                app:indicatorName="AudioEqualizerIndicator"
+                app:indicatorColor="@color/red"
+                />
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/collection_music_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:contentPadding="8dp"
+            app:cardUseCompatPadding="true"
+            app:cardPreventCornerOverlap="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp">
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center|center_horizontal"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/personal_collection"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/personal_collection_txt"
+                android:textSize="35sp" />
+            <com.archermind.music.loadingview.LoadingIndicatorView
+                android:id="@+id/collection_music_wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/LoadingIndicatorView"
+                android:visibility="invisible"
+                app:indicatorName="AudioEqualizerIndicator"
+                app:indicatorColor="@color/red"
+                />
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

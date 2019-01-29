@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <!--  顶部音乐  -->
+    <RelativeLayout
+        android:id="@+id/search_music_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/red">
+
+        <ImageButton
+            android:id="@+id/search_music_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_arrow" />
+
+        <EditText
+            android:id="@+id/search_music_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/search_music_back"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:background="@null"
+            android:hint="@string/search_tips"
+            android:textColorHint="@color/grey_300"
+            android:textSize="40sp" />
+
+        <ImageButton
+            android:id="@+id/search_clear_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_toLeftOf="@id/search_submit_btn"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/search_clear" />
+
+        <ImageButton
+            android:id="@+id/search_submit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/search_music" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/search_tag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/search_hot_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:text="@string/search_hot_txt"
+            android:textSize="30sp" />
+
+    <com.archermind.music.tagview.TagContainerLayout
+        android:id="@+id/search_hot_tag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        app:container_background_color="#00000000"
+        app:container_border_color="#33666666"
+        app:container_border_radius="0dp"
+        app:horizontal_interval="10dp"
+        app:tag_background_color="#00000000"
+        app:tag_border_color="#330000ff"
+        app:tag_border_width="1dp"
+        app:tag_clickable="true"
+        app:tag_corner_radius="1dp"
+        app:tag_enable_cross="false"
+        app:tag_horizontal_padding="15dp"
+        app:tag_max_length="18"
+        app:tag_text_color="#ff666666"
+        app:tag_text_direction="ltr"
+        app:tag_text_size="30sp"
+        app:tag_theme="none"
+        app:tag_vertical_padding="10dp"
+        app:vertical_interval="10dp"/>
+
+
+        <TextView
+            android:id="@+id/search_history_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/search_history_txt"
+            android:textSize="30sp" />
+
+        <com.archermind.music.tagview.TagContainerLayout
+            android:id="@+id/search_history_tag_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            app:container_background_color="#00000000"
+            app:container_border_color="#33666666"
+            app:container_border_radius="0dp"
+            app:horizontal_interval="10dp"
+            app:tag_background_color="#00000000"
+            app:tag_border_color="#330000ff"
+            app:tag_border_width="1dp"
+            app:tag_clickable="true"
+            app:tag_corner_radius="1dp"
+            app:tag_enable_cross="false"
+            app:tag_horizontal_padding="15dp"
+            app:tag_max_length="18"
+            app:tag_text_color="#ff666666"
+            app:tag_text_direction="ltr"
+            app:tag_text_size="30sp"
+            app:tag_theme="none"
+            app:tag_vertical_padding="10dp"
+            app:vertical_interval="10dp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/windowBackground">
+
+        <ListView
+            android:id="@+id/lv_search_music_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null" />
+
+        <include
+            android:id="@+id/ll_loading"
+            layout="@layout/include_loading"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/ll_load_fail"
+            layout="@layout/include_load_fail"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>
