@@ -48,7 +48,7 @@
                     android:ellipsize="end"
                     android:singleLine="true"
                     android:text="歌曲"
-                    android:textSize="30sp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/tv_artist"
@@ -59,7 +59,7 @@
                     android:singleLine="true"
                     android:text="歌手 - 专辑"
                     android:textColor="@color/grey"
-                    android:textSize="30sp" />
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <ImageView

@@ -84,4 +84,18 @@ public class OnlineMusic {
     public void setArtist_name(String artist_name) {
         this.artist_name = artist_name;
     }
+
+    @Override
+    public String toString() {
+        return "OnlineMusic{" +
+                "pic_big='" + pic_big + '\'' +
+                ", pic_small='" + pic_small + '\'' +
+                ", lrclink='" + lrclink + '\'' +
+                ", song_id='" + song_id + '\'' +
+                ", title='" + title + '\'' +
+                ", ting_uid='" + ting_uid + '\'' +
+                ", album_title='" + album_title + '\'' +
+                ", artist_name='" + artist_name + '\'' +
+                '}';
+    }
 }

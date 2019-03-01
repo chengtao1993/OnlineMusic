@@ -7,6 +7,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -118,6 +119,9 @@ public class OnlineMusicActivity extends BaseActivity implements View.OnClickLis
                 }
                 mOffset += Constants.MUSIC_LIST_SIZE;
                 mMusicList.addAll(response.getSong_list());
+                for(OnlineMusic info:mMusicList ){
+                    Log.e("hct","{music = "+ info+"/n}");
+                }
                 mAdapter.notifyDataSetChanged();
             }
 

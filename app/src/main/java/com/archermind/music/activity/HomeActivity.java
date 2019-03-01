@@ -47,9 +47,11 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     public void initViewAndData(boolean isLandscape){
         mLinearLayoutMgr = new LinearLayoutManager(this);
         if(isLandscape){
+            Log.e("hct","isLandscape");
             setContentView(R.layout.activity_home_land);
             mLinearLayoutMgr.setOrientation(LinearLayoutManager.HORIZONTAL);
         }else{
+            Log.e("hct","isPort");
             setContentView(R.layout.activity_home_port);
             mLinearLayoutMgr.setOrientation(LinearLayoutManager.VERTICAL);
         }

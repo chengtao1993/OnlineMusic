@@ -94,22 +94,26 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     private void bindService() {
+        Log.e("hct","bindService");
         Intent intent = new Intent();
         intent.setClass(this, PlayService.class);
         serviceConnection = new PlayServiceConnection();
         bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+
     }
 
     private class PlayServiceConnection implements ServiceConnection {
+
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
+            Log.e("hct","onServiceConnected");
             playService = ((PlayService.PlayBinder) service).getService();
             onServiceBound();
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            Log.e(getClass().getSimpleName(), "service disconnected");
+            Log.e("hct", "service disconnected");
         }
     }
 

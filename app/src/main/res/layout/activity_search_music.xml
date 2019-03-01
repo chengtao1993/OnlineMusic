@@ -9,15 +9,15 @@
     <RelativeLayout
         android:id="@+id/search_music_title_layout"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:background="@color/red">
 
         <ImageButton
             android:id="@+id/search_music_back"
             android:clickable="true"
             android:focusable="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
@@ -34,12 +34,12 @@
             android:background="@null"
             android:hint="@string/search_tips"
             android:textColorHint="@color/grey_300"
-            android:textSize="40sp" />
+            android:textSize="20sp" />
 
         <ImageButton
             android:id="@+id/search_clear_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:visibility="gone"
             android:clickable="true"
             android:focusable="true"
@@ -50,8 +50,8 @@
 
         <ImageButton
             android:id="@+id/search_submit_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:clickable="true"
             android:focusable="true"
             android:layout_alignParentRight="true"
@@ -75,7 +75,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="5dp"
             android:text="@string/search_hot_txt"
-            android:textSize="30sp" />
+            android:textSize="13sp" />
 
     <com.archermind.music.tagview.TagContainerLayout
         android:id="@+id/search_hot_tag_layout"
@@ -97,7 +97,7 @@
         app:tag_max_length="18"
         app:tag_text_color="#ff666666"
         app:tag_text_direction="ltr"
-        app:tag_text_size="30sp"
+        app:tag_text_size="10sp"
         app:tag_theme="none"
         app:tag_vertical_padding="10dp"
         app:vertical_interval="10dp"/>
@@ -110,7 +110,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="20dp"
             android:text="@string/search_history_txt"
-            android:textSize="30sp" />
+            android:textSize="13sp" />
 
         <com.archermind.music.tagview.TagContainerLayout
             android:id="@+id/search_history_tag_layout"
@@ -132,7 +132,7 @@
             app:tag_max_length="18"
             app:tag_text_color="#ff666666"
             app:tag_text_direction="ltr"
-            app:tag_text_size="30sp"
+            app:tag_text_size="10sp"
             app:tag_theme="none"
             app:tag_vertical_padding="10dp"
             app:vertical_interval="10dp"/>

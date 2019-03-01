@@ -28,6 +28,7 @@ public class DBManager {
         Database db = helper.getWritableDb();
         DaoSession daoSession = new DaoMaster(db).newSession();
         musicDao = daoSession.getMusicDao();
+
     }
 
     private DBManager() {
@@ -36,4 +37,5 @@ public class DBManager {
     public MusicDao getMusicDao() {
         return musicDao;
     }
+
 }

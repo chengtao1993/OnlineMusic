@@ -2,6 +2,7 @@ package com.archermind.music.executor;
 
 import android.app.Activity;
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.io.File;
 
@@ -68,6 +69,7 @@ public abstract class PlayOnlineMusic extends PlayMusic {
                 }
 
                 music.setPath(response.getBitrate().getFile_link());
+                Log.e("ttt","response.getBitrate().getFile_link() = "+response.getBitrate().getFile_link());
                 music.setDuration(response.getBitrate().getFile_duration() * 1000);
                 checkCounter();
             }

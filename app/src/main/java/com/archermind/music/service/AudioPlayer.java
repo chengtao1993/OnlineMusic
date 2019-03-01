@@ -6,6 +6,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -110,6 +111,7 @@ public class AudioPlayer {
         try {
             mediaPlayer.reset();
             mediaPlayer.setDataSource(music.getPath());
+            Log.e("ttt","music.getPath() = "+music.getPath());
             mediaPlayer.prepareAsync();
             state = STATE_PREPARING;
             for (OnPlayerEventListener listener : listeners) {
